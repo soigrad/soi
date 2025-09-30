@@ -1,7 +1,11 @@
 [build]
-  command = "npm install --force && npm run build"
+  # أمر البناء: يستخدم Yarn لتثبيت كل شيء، ثم يشغل أمر البناء الصحيح
+  command = "yarn install --production=false && yarn build"
+  # مسار النشر:
   publish = "dist"
+  # مسار القاعدة:
   base = "."
 
+# تحديد إصدار Node.js
 [build.environment]
   NODE_VERSION = "18"
